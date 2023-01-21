@@ -88,5 +88,4 @@ router.get("/user-list", async (req, res) => {
 
 //Login
 router.post("/login", loginController);
-
 module.exports = { router };
