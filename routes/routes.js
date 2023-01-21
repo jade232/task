@@ -60,7 +60,7 @@ router.patch("/user-list/:id", async (req, res) => {
     const result = await User.findByIdAndUpdate(id, updates);
     res.status(200).send({ message: "User Update Successfully" });
   } catch (error) {
-    console.log(err);
+    console.log(error);
   }
 });
 
@@ -76,7 +76,7 @@ router.delete("/user-list/:id", async (req, res) => {
       }
     });
   } catch (error) {
-    console.log(err);
+    console.log(error);
   }
 });
 
