@@ -3,12 +3,14 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const { router } = require("./routes/routes");
+const cors = require("cors");
 
 const app = express();
 const port = process.env.PORT;
 const db_url = process.env.db_connecting_url;
 
 app.use(bodyParser.json());
+app.use(cors());
 
 mongoose
   .connect(db_url)
